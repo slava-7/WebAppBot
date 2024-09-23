@@ -122,7 +122,7 @@
             document.getElementById("error").innerText = "Заполните поле";
             return;
         }
-        if(email.length < 5 | email.includes("@")) {
+        if(email.length < 5 | email.includes("@") == False) {
             document.getElementById("error").innerText = "Заполните поле";
             return;
         }
