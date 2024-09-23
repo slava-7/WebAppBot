@@ -119,15 +119,15 @@
         let email = document.getElementById("user_email").value;
         let phone = document.getElementById("user_phone").value;
         if(name.length < 5) {
-            document.getElementById("error").innerText = "Заполните поле";
+            document.getElementById("error").innerText = "Заполните поле Име";
             return;
         }
-        if((email.length < 5) && (email.includes("@") == false)) {
-            document.getElementById("error").innerText = "Заполните поле";
+        if((email.length < 5) && (email.includes("@") === false)) {
+            document.getElementById("error").innerText = "Заполните поле Email";
             return;
         }
         if(phone.length < 5) {
-            document.getElementById("error").innerText = "Заполните поле";
+            document.getElementById("error").innerText = "Заполните поле Phone";
             return;
         }
 
