@@ -34,7 +34,10 @@
             margin-bottom: 10px;
         }
 
-        
+        img {
+            width: 350px;
+            margin: 10px auto;
+        }
 
         p {
             width: 350px;
@@ -42,17 +45,16 @@
         }
 
         button {
-            border: 0;
+            border: 0px;
             border-radius: 5px;
             margin-top: 50px;
             height: 60px;
-            width: 20px;
+            width: 200px;
             font-size: 20px;
             font-weight: 500;
             cursor: pointer;
             transition: all 500ms ease;
-            cursor: var(--tg-theme-button-color);
-            background: var(--tg-theme-button-text-color);
+            
         }
 
         button:hover {
@@ -64,13 +66,15 @@
 
 </head>
 <body>
-     <div id = 'main'>
-         <h1>Markus Pizza</h1>
-         <img width="300" height="300" src="https://www.shutterstock.com/shutterstock/photos/2437343407/display_1500/stock-vector-top-view-pizza-with-various-ingredients-whole-pizza-with-mushrooms-tomatoes-onions-peppers-and-2437343407.jpg" alt="logo">
-         <p>Вкусная пицца, закажи не пожалеешь!</p>
-         <button id="buy">Купить</button>
-     </div>
-        <script src="https://telegram.org/js/telegram-web-app.js"></script>
+<div id='main'>
+    <h1>Markus Pizza</h1>
+    <img width="300" height="300"
+         src="https://www.shutterstock.com/shutterstock/photos/2437343407/display_1500/stock-vector-top-view-pizza-with-various-ingredients-whole-pizza-with-mushrooms-tomatoes-onions-peppers-and-2437343407.jpg"
+         alt="logo">
+    <p>Вкусная пицца, закажи не пожалеешь!</p>
+    <button id="buy">Купить</button>
+</div>
+<script src="https://telegram.org/js/telegram-web-app.js"></script>
 
 </body>
 </html>
