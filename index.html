@@ -122,8 +122,12 @@
             document.getElementById("error").innerText = "Заполните поле Име";
             return;
         }
-        if((email.length < 5) | (email.includes('@') == false)) {
+        if(email.length < 5) {
             document.getElementById("error").innerText = "Заполните поле Email";
+            return;
+        }
+        if(email.includes('@') == false) {
+            document.getElementById("error").innerText = "Поле Email заполненно не верно";
             return;
         }
         if(phone.length < 5) {
