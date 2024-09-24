@@ -119,7 +119,7 @@
         let phone = document.getElementById("user_phone").value;
         if(name.length < 5) {
             document.getElementById("error").innerText = "Заполните поле Имя";
-            return;
+            return document.getElementById("form").style.display = 'block';
         }
         if(email.length < 5) {
             document.getElementById("error").innerText = "Заполните поле Email";
@@ -130,9 +130,8 @@
             return;
         }
         if(phone.length < 5) {
-            document.getElementById("error").innerText = "Заполните поле Phone";
+            document.getElementById("error").innerText = "Заполните поле телефон";
             return;
-        }
 
         let data = {
             name: name,
