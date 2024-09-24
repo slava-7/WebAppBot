@@ -87,10 +87,11 @@
 <body>
 <div id='main'>
     <h1>Markus Pizza</h1>
+    <p>Итальянская пицца на тонком тесте</p>
     <img width="300" height="300"
          src="https://www.shutterstock.com/shutterstock/photos/2437343407/display_1500/stock-vector-top-view-pizza-with-various-ingredients-whole-pizza-with-mushrooms-tomatoes-onions-peppers-and-2437343407.jpg"
          alt="logo">
-    <p>Вкусная пицца, закажи не пожалеешь!</p>
+    <p><i>Markus Pizza нельзя не соблазниться!</i></p>
     <button id="buy">Купить</button>
 </div>
 <form id="form">
@@ -113,35 +114,37 @@
     });
 
     order.addEventListener("click", () => {
-        document.getElementById("error").innerText = "";
-        let name = document.getElementById("user_name").value;
-        let email = document.getElementById("user_email").value;
-        let phone = document.getElementById("user_phone").value;
-        if(name.length < 5) {
-            document.getElementById("error").innerText = "Заполните поле Имя";
-            return document.getElementById("form").style.display = 'block';
+            document.getElementById("error").innerText = "";
+            let name = document.getElementById("user_name").value;
+            let email = document.getElementById("user_email").value;
+            let phone = document.getElementById("user_phone").value;
+            if (name.length < 5) {
+                document.getElementById("error").innerText = "Заполните поле Имя";
+                return(document.getElementById("form").style.display = 'block');
+            }
+            if (email.length < 5) {
+                document.getElementById("error").innerText = "Заполните поле Email";
+                return;
+            }
+            if (email.includes('@') == false) {
+                document.getElementById("error").innerText = "Поле Email заполненно не верно";
+                return;
+            }
+            if (phone.length < 5) {
+                document.getElementById("error").innerText = "Заполните поле телефон";
+                return;
+            }
+            let data = {
+                name: name,
+                email: email,
+                phone: phone
+            }
+            tg.sendData(JSON.stringify(data));
+
+            tg.close();
         }
-        if(email.length < 5) {
-            document.getElementById("error").innerText = "Заполните поле Email";
-            return;
-        }
-        if(email.includes('@') == false) {
-            document.getElementById("error").innerText = "Поле Email заполненно не верно";
-            return;
-        }
-        if(phone.length < 5) {
-            document.getElementById("error").innerText = "Заполните поле телефон";
-            return;
-        }
-        let data = {
-            name: name,
-            email: email,
-            phone: phone
-        }
-        tg.sendData(JSON.stringify(data));
-        
-        tg.close();
-    });
+    )
+    ;
 </script>
 
 </body>
