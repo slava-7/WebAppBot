@@ -26,7 +26,15 @@
             width: 100%;
             padding: 20px;
             text-align: center;
+        }
 
+        #menu {
+            display: none;
+            text-align: center;
+        }
+
+        #menu button {
+            margin-top: 200px;
         }
 
         h1 {
@@ -34,10 +42,19 @@
             margin-bottom: 10px;
         }
 
-        img {
-            width: 300px;
+        #main img {
+            width: 350px;
             margin: 10px auto;
         }
+
+
+        #menu img {
+            width: 40px;
+            margin-bottom: 150px;
+        }
+
+
+
 
         p {
             width: 350px;
@@ -66,6 +83,7 @@
             text-align: center;
         }
 
+
         input {
             width: 90%;
             outline: none;
@@ -90,6 +108,12 @@
     <p>Итальянская пицца на тонком тесте</p>
     <img src="./RingPizza.png" alt="logo">
     <p><i>Markus Pizza нельзя не соблазниться!</i></p>
+    <button id="menu1">Меню</button>
+</div>
+<div id='menu'>
+    <h1>Меню Пицца</h1>
+    <p>Собири корзину</p>
+    <img src="./PiecePizza.png"  alt="logo">
     <button id="buy">Купить</button>
 </div>
 <form id="form">
@@ -106,6 +130,11 @@
     let order = document.getElementById("order");
     tg.expand();
 
+    menu1.addEventListener("click", () => {
+        document.getElementById("main").style.display = 'none';
+        document.getElementById("menu").style.display = 'block';
+    });
+
     buy.addEventListener("click", () => {
         document.getElementById("main").style.display = 'none';
         document.getElementById("form").style.display = 'block';
@@ -118,7 +147,7 @@
             let phone = document.getElementById("user_phone").value;
             if (name.length < 5) {
                 document.getElementById("error").innerText = "Заполните поле Имя";
-                return(document.getElementById("form").style.display = 'block');
+                return (document.getElementById("form").style.display = 'block');
             }
             if (email.length < 5) {
                 document.getElementById("error").innerText = "Заполните поле Email";
