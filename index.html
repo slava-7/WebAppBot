@@ -5,6 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
     <title>Online Shop</title>
     <style>
         @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;500&display=swap");
@@ -43,15 +44,15 @@
         }
 
         #main img {
-            width: 300px;
+            width: 350px;
             margin: 10px auto;
         }
 
 
-        #menu img {
+        #1 {
             width: 40px;
             margin-bottom: 200px;
-            margin-right: 100px;
+            margin-right: 150px;
 
         }
 
@@ -115,8 +116,26 @@
 <div id='menu'>
     <h1>Меню Пицца</h1>
     <p>Собири корзину</p>
-    <img src="./PiecePizza1.png"  alt="logo">
-    <span>Маргарита</span>
+    <div id="1">
+        <img class="bd-placeholder-img mr-1 mt-1 rounded" src="./PiecePizza1.png" alt="logo">
+        <span>Маргарита</span>
+        <span><i>(соус,сыр,помидоры)</i></span>
+    </div>
+    <div id="2">
+        <img class="bd-placeholder-img mr-1 mt-1 rounded" src="./PiecePizza1.png" alt="logo">
+        <span>Маргарита</span>
+        <span><i>(соус,сыр,помидоры)</i></span>
+    </div>
+    <div id="3">
+        <img class="bd-placeholder-img mr-1 mt-1 rounded" src="./PiecePizza1.png" alt="logo">
+        <span>Маргарита</span>
+        <span><i>(соус,сыр,помидоры)</i></span>
+    </div>
+    <div id="4">
+        <img class="bd-placeholder-img mr-1 mt-1 rounded" src="./PiecePizza1.png" alt="logo">
+        <span>Маргарита</span>
+        <span><i>(соус,сыр,помидоры)</i></span>
+    </div>
     <button id="buy">Купить</button>
 </div>
 <form id="form">
@@ -140,7 +159,6 @@
 
     buy.addEventListener("click", () => {
         document.getElementById("main").style.display = 'none';
-        document.getElementById("menu").style.display = 'none';
         document.getElementById("form").style.display = 'block';
     });
 
