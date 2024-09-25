@@ -171,11 +171,10 @@
             let name = document.getElementById("user_name").value;
             let email = document.getElementById("user_email").value;
             let phone = document.getElementById("user_phone").value;
-            document.getElementById("user_name").value = tg.initData.user.first_name +
-            " " + tg.initData.user.last_name;
+            document.getElementById("user_name").value = tg.initDataUnsafe.user.first_nam +
+            " " + tg.initDataUnsafe.user.last_nam;
             if (name.length < 5) {
-                document.getElementById("error").innerText = tg.initDataUnsafe.user.first_name +
-            " " + tg.initDataUnsafe.user.last_name;;
+                document.getElementById("error").innerText = "Заполните поле Имя";
                 return;
             }
             if (email.length < 5) {
