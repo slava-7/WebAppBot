@@ -171,7 +171,7 @@
             let phone = document.getElementById("user_phone").value;
             if (name.length < 5) {
                 document.getElementById("error").innerText = "Заполните поле Имя";
-                return (document.getElementById("form").style.display = 'block');
+                return;
             }
             if (email.length < 5) {
                 document.getElementById("error").innerText = "Заполните поле Email";
