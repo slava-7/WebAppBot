@@ -162,8 +162,7 @@
         document.getElementById("main").style.display = 'none';
         document.getElementById("menu").style.display = 'none';
         document.getElementById("form").style.display = 'block';
-        document.getElementById("user_name").value = tg.initDataUnsafe.user.first_nam +
-            " " + tg.initDataUnsafe.user.last_name;
+        document.getElementById("user_name").value = tg.initDataUnsafe.user.username;
     });
 
     order.addEventListener("click", () => {
@@ -171,8 +170,6 @@
             let name = document.getElementById("user_name").value;
             let email = document.getElementById("user_email").value;
             let phone = document.getElementById("user_phone").value;
-            document.getElementById("user_name").value = tg.initDataUnsafe.user.first_nam +
-            " " + tg.initDataUnsafe.user.last_nam;
             if (name.length < 5) {
                 document.getElementById("error").innerText = "Заполните поле Имя";
                 return;
