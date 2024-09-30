@@ -10,23 +10,24 @@
     <style>
         @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;500&display=swap");
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        /** {*/
+        /*    margin: 0;*/
+        /*    padding: 0;*/
+        /*    box-sizing: border-box;*/
+        /*}*/
 
         body {
-            font-family: 'Montserrat', SansSerif;
             font-weight: 200;
             color: var(--tg-theme-color);
             background: var(--tg-theme-bg-color);
         }
 
         #main {
-            width: 100%;
-            padding: 20px;
-            text-align: center;
+                /*display: none;*/
+                font-family: 'Montserrat', SansSerif;
+                width: 100%;
+                padding: 20px;
+                text-align: center;
         }
 
         #menu {
@@ -34,29 +35,19 @@
             text-align: center;
         }
 
-        #menu button {
-            margin-top: 200px;
+        #buy {
+            margin-top: 150px;
         }
 
         h1 {
-            margin-top: 50px;
+            margin-top: 20px;
             margin-bottom: 10px;
         }
 
         #main img {
-            width: 350px;
+            width: 300px;
             margin: 10px auto;
         }
-
-
-        #1 {
-            width: 20px;
-            margin-bottom: 200px;
-            margin-right: 150px;
-
-        }
-
-
 
 
         p {
@@ -64,8 +55,31 @@
             margin: 0 auto;
         }
 
-        button {
+        #order {
             border: 0px;
+            border-radius: 5px;
+            margin-top: 30px;
+            height: 60px;
+            width: 200px;
+            font-size: 20px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 500ms ease;
+
+        }
+
+        #buy {
+            margin-top: 30px;
+            height: 60px;
+            width: 200px;
+            font-size: 20px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 500ms ease;
+
+        }
+
+        #menu1 {
             border-radius: 5px;
             margin-top: 30px;
             height: 60px;
@@ -101,11 +115,46 @@
             border-color: #db5d5d;
         }
 
+        .warning button {
+            width: 70px;
+            height: 20px;
+            font-size: 12px;
+            padding: initial;
+            margin: auto;
+        }
 
+
+        .warning {
+                width: 100px;
+                height: 100px;
+                border: 2px solid seashell;
+                border-radius: 2rem;
+                padding: 0.5rem;
+                display: flex;
+                flex-direction: column;
+                margin-left: 400px;
+        }
+
+        .warning img {
+                width: 40px;
+                height: 50px;
+                margin: initial;
+        }
+
+        .warning p {
+                font: small-caps bold italic 0.6rem sans-serif;
+                text-align: left;
+        }
+
+        #Marg {
+            width: 150px;
+            height: 150px;
+        }
     </style>
 
 </head>
 <body>
+
 <div id='main'>
     <h1>Markus Pizza</h1>
     <p>Итальянская пицца на тонком тесте</p>
@@ -113,30 +162,20 @@
     <p><i>Markus Pizza нельзя не соблазниться!</i></p>
     <button id="menu1">Меню</button>
 </div>
+
 <div id='menu'>
-    <h1>Меню Пицца</h1>
-    <p>Собири корзину</p>
-    <div id="1">
-        <img class="bd-placeholder-img mr-1 mt-1 rounded" src="./PiecePizza1.png" alt="logo">
-        <span>Маргарита</span>
-        <span><i>(соус,сыр,помидоры)</i></span>
-    </div>
-    <div id="2">
-        <img class="bd-placeholder-img mr-1 mt-1 rounded" src="./PiecePizza1.png" alt="logo">
-        <span>Маргарита</span>
-        <span><i>(соус,сыр,помидоры)</i></span>
-    </div>
-    <div id="3">
-        <img class="bd-placeholder-img mr-1 mt-1 rounded" src="./PiecePizza1.png" alt="logo">
-        <span>Маргарита</span>
-        <span><i>(соус,сыр,помидоры)</i></span>
-    </div>
-    <div id="4">
-        <img class="bd-placeholder-img mr-1 mt-1 rounded" src="./PiecePizza1.png" alt="logo">
-        <span>Маргарита</span>
-        <span><i>(соус,сыр,помидоры)</i></span>
-    </div>
-    <button id="buy">Купить</button>
+    <h1><i>Pizza</i></h1>
+
+    <form id="Marg">
+        <div class="warning">
+            <span class="count"></span>
+            <img src="./PiecePizza1.png" alt="Logo">
+            <p>Маргарита</p>
+            <button class="btn btn-outline-warning" id="btnMarg"> 150rub </button>
+        </div>
+    </form>
+
+    <button class= "btn btn-outline-danger" id="buy">Купить</button>
 </div>
 <form id="form">
     <input type="text" placeholder="Имя" id="user_name">
@@ -151,18 +190,36 @@
     let tg = window.Telegram.WebApp;
     let buy = document.getElementById("buy");
     let order = document.getElementById("order");
+    let btnMarg = document.getElementById("btnMarg");
+    let menu1 = document.getElementById("menu1");
+    let quantity = '';
     tg.expand();
 
+
+    btnMarg.addEventListener("click", () => {
+        // alert("Ты в функции!");
+        var count = document.querySelector(".count");
+       quantity = quantity + 1;
+        count.innerHTML = quantity;
+        // document.getElementById("count").writeln(text = "My new text!");
+        // count.innerHtml("quantity");
+        // return (document.getElementById("menu").style.display = 'block');
+        // document.getElementById("main").style.display = 'none';
+        // document.getElementById("menu").style.display = 'block';
+    });
+
     menu1.addEventListener("click", () => {
+        document.getElementById("form").style.display = 'none';
         document.getElementById("main").style.display = 'none';
         document.getElementById("menu").style.display = 'block';
+
     });
 
     buy.addEventListener("click", () => {
         document.getElementById("main").style.display = 'none';
         document.getElementById("menu").style.display = 'none';
         document.getElementById("form").style.display = 'block';
-        document.getElementById("user_name").value = tg.initDataUnsafe.user.first_name;
+        document.getElementById("user_name").value = tg.initDataUnsafe.user.username;
     });
 
     order.addEventListener("click", () => {
@@ -170,6 +227,7 @@
             let name = document.getElementById("user_name").value;
             let email = document.getElementById("user_email").value;
             let phone = document.getElementById("user_phone").value;
+
             if (name.length < 5) {
                 document.getElementById("error").innerText = "Заполните поле Имя";
                 return;
@@ -195,8 +253,7 @@
 
             tg.close();
         }
-    )
-    ;
+    );
 </script>
 
 </body>
