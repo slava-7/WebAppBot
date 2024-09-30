@@ -168,10 +168,9 @@
 
 <div id='menu'>
     <h1><i>Pizza</i></h1>
-
+    <span class="count"></span>
     <form id="Marg1">
         <div class="warning">
-            <span class="count"></span>
             <img src="./PiecePizza1.png" alt="Logo">
             <p>Маргарита</p>
             <button class="btn btn-outline-warning" id="btnMarg1"> 150rub </button>
@@ -179,7 +178,6 @@
     </form>
     <form id="Marg2">
         <div class="warning">
-            <span class="count"></span>
             <img src="./PiecePizza1.png" alt="Logo">
             <p>Маргарита</p>
             <button class="btn btn-outline-warning" id="btnMarg2"> 150rub </button>
@@ -213,14 +211,14 @@
         // alert("Ты в функции!");
         var count = document.querySelector(".count");
        quantity = quantity + 1;
-        count.innerHTML = quantity;
+        count.innerHTML = 'Покупки' + quantity;
     });
 
     btnMarg2.addEventListener("click", () => {
         // alert("Ты в функции!");
         var count = document.querySelector(".count");
        quantity = quantity + 1;
-        count.innerHTML = quantity;
+        count.innerHTML = 'Покупки' + quantity;
     });
 
     menu1.addEventListener("click", () => {
