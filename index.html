@@ -130,9 +130,9 @@
                 border: 2px solid seashell;
                 border-radius: 2rem;
                 padding: 0.5rem;
-/*                 display: flex; */
-/*                 flex-direction: column; */
-/*                 margin-left: 400px; */
+                display: flex;
+                flex-direction: column;
+                margin-left: 400px;
         }
 
         .warning img {
@@ -146,7 +146,7 @@
                 text-align: left;
         }
 
-        #Marg {
+        #Marg1 {
             width: 150px;
             height: 150px;
             width: 10%;
@@ -169,14 +169,23 @@
 <div id='menu'>
     <h1><i>Pizza</i></h1>
 
-    <form id="Marg">
+    <form id="Marg1">
         <div class="warning">
-            <img src="./PiecePizza1.png" alt="Logo">
             <span class="count"></span>
+            <img src="./PiecePizza1.png" alt="Logo">
             <p>Маргарита</p>
-            <button class="btn btn-outline-warning" id="btnMarg"> 150rub </button>
+            <button class="btn btn-outline-warning" id="btnMarg1"> 150rub </button>
         </div>
     </form>
+    <form id="Marg2">
+        <div class="warning">
+            <span class="count"></span>
+            <img src="./PiecePizza1.png" alt="Logo">
+            <p>Маргарита</p>
+            <button class="btn btn-outline-warning" id="btnMarg2"> 150rub </button>
+        </div>
+    </form>
+
 
     <button class= "btn btn-outline-danger" id="buy">Купить</button>
 </div>
@@ -193,22 +202,25 @@
     let tg = window.Telegram.WebApp;
     let buy = document.getElementById("buy");
     let order = document.getElementById("order");
-    let btnMarg = document.getElementById("btnMarg");
+    let btnMarg1 = document.getElementById("btnMarg1");
+    let btnMarg2 = document.getElementById("btnMarg2");
     let menu1 = document.getElementById("menu1");
-    let quantity = 0;
+    let quantity = '';
     tg.expand();
 
 
-    btnMarg.addEventListener("click", () => {
+    btnMarg1.addEventListener("click", () => {
         // alert("Ты в функции!");
         var count = document.querySelector(".count");
        quantity = quantity + 1;
         count.innerHTML = quantity;
-        // document.getElementById("count").writeln(text = "My new text!");
-        // count.innerHtml("quantity");
-        // return (document.getElementById("menu").style.display = 'block');
-        // document.getElementById("main").style.display = 'none';
-        // document.getElementById("menu").style.display = 'block';
+    });
+
+    btnMarg2.addEventListener("click", () => {
+        // alert("Ты в функции!");
+        var count = document.querySelector(".count");
+       quantity = quantity + 1;
+        count.innerHTML = quantity;
     });
 
     menu1.addEventListener("click", () => {
