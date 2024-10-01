@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="ru">
 <head>
@@ -29,7 +30,6 @@
                 padding: 20px;
                 text-align: center;
                 border: thick double indianred;
-            /*                 border: 5px solid indianred; */
                 border-radius: 30px;
         }
 
@@ -38,7 +38,7 @@
             border: thick double indianred;
             border-radius: 30px;
             text-align: center;
-            flex-basis: auto;
+            width: 100%;
         }
 
         
@@ -125,18 +125,13 @@
             height: 20px;
             font-size: 12px;
             padding: initial;
-            text-decoration-color: black;
-            margin: auto;
         }
 
 
         .warning {
-                width: 100px;
-                height: 100px;
                 border: 2px solid seashell;
-                border-radius: 2rem;
+                border-radius: 10px;
                 padding: 0.5rem;
-                flex-basis: auto;
         }
 
         .warning img {
@@ -147,63 +142,68 @@
 
         .warning p {
                 font: small-caps bold italic 0.6rem sans-serif;
-                text-align: left;
+                text-align: initial;
         }
 
         #Marg1 {
-            width: 150px;
-            height: 150px;
+            width: 120px;
+            height: 100px;
             padding: 20px;
             text-align: center;
         }
 
         #Marg2 {
-            width: 150px;
-            height: 150px;
+            width: 120px;
+            height: 100px;
             padding: 20px;
             text-align: center;
         }
 
         #Marg3 {
-            width: 150px;
-            height: 150px;
+            width: 120px;
+            height: 100px;
             padding: 20px;
             text-align: center;
         }
-        
+
          #Marg4 {
-            width: 150px;
-            height: 150px;
+            width: 120px;
+            height: 100px;
             padding: 20px;
             text-align: center;
         }
 
         #Marg5 {
-            width: 150px;
-            height: 150px;
+            width: 120px;
+            height: 100px;
             padding: 20px;
             text-align: center;
         }
 
         #Marg6 {
-            width: 150px;
-            height: 150px;
+            width: 120px;
+            height: 100px;
             padding: 20px;
             text-align: center;
         }
-    
+
         .pizza1 {
+            /*box-sizing: content-box;*/
             display: flex;
             flex-basis: auto;
-            width: 600px;
+            width: 110px;
+            height: 110px;
+
+
         }
 
         .pizza2 {
             display: flex;
             flex-basis: auto;
-            width: 600px;
+            width: 110px;
+            height: 110px;
         }
-        
+
     </style>
 
 </head>
@@ -228,21 +228,20 @@
                 <button class="btn btn-outline-warning" id="btnMarg1"> 150rub </button>
             </div>
         </form>
-            <form id="Marg2">
+        <form id="Marg2">
             <div class="warning">
                 <img src="./PiecePizza2.png" alt="Logo">
                 <p>Маргарита</p>
                 <button class="btn btn-outline-warning" id="btnMarg2"> 150rub </button>
             </div>
         </form>
-
-        <form id="Marg3">
-            <div class="warning">
-                <img src="./PiecePizza2.png" alt="Logo">
-                <p>Маргарита</p>
-                <button class="btn btn-outline-warning" id="btnMarg3"> 150rub </button>
-            </div>
-        </form>
+            <form id="Marg3">
+                <div class="warning">
+                    <img src="./PiecePizza2.png" alt="Logo">
+                    <p>Маргарита</p>
+                    <button class="btn btn-outline-warning" id="btnMarg3"> 150rub </button>
+                </div>
+            </form>
     </div>
     <div class= "pizza2">
         <form id="Marg4">
@@ -252,14 +251,13 @@
                 <button class="btn btn-outline-warning" id="btnMarg4"> 150rub </button>
             </div>
         </form>
-            <form id="Marg5">
+        <form id="Marg5">
             <div class="warning">
                 <img src="./PiecePizza2.png" alt="Logo">
                 <p>Маргарита</p>
                 <button class="btn btn-outline-warning" id="btnMarg5"> 150rub </button>
             </div>
         </form>
-
         <form id="Marg6">
             <div class="warning">
                 <img src="./PiecePizza2.png" alt="Logo">
@@ -268,7 +266,7 @@
             </div>
         </form>
     </div>
-    
+
     <button class= "btn btn-outline-danger" id="buy">Оформить заказ</button>
 </div>
 <form id="form">
@@ -315,7 +313,7 @@
        quantity = quantity + 1;
         count.innerHTML = 'Покупки - ' + quantity;
     });
-    
+
     btnMarg4.addEventListener("click", () => {
         // alert("Ты в функции!");
         var count = document.querySelector(".count");
