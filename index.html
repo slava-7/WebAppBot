@@ -72,6 +72,7 @@
 
         #buy {
             margin-top: 30px;
+            margin-bottom: 10px;
             height: 60px;
             width: 200px;
             font-size: 20px;
@@ -164,6 +165,15 @@
             padding: 20px;
             text-align: center;
         }
+
+        #Marg3 {
+            width: 150px;
+            height: 150px;
+            width: 10%;
+            padding: 20px;
+            text-align: center;
+        }
+        
     </style>
 
 </head>
@@ -195,6 +205,13 @@
         </div>
     </form>
 
+    <form id="Marg3">
+        <div class="warning">
+            <img src="./PiecePizza2.png" alt="Logo">
+            <p>Маргарита</p>
+            <button class="btn btn-outline-warning" id="btnMarg3"> 150rub </button>
+        </div>
+    </form>
 
     <button class= "btn btn-outline-danger" id="buy">Купить</button>
 </div>
@@ -213,6 +230,7 @@
     let order = document.getElementById("order");
     let btnMarg1 = document.getElementById("btnMarg1");
     let btnMarg2 = document.getElementById("btnMarg2");
+    let btnMarg3 = document.getElementById("btnMarg3");
     let menu1 = document.getElementById("menu1");
     let quantity = 0;
     tg.expand();
@@ -232,6 +250,13 @@
         count.innerHTML = 'Покупки - ' + quantity;
     });
 
+    btnMarg3.addEventListener("click", () => {
+        // alert("Ты в функции!");
+        var count = document.querySelector(".count");
+       quantity = quantity + 1;
+        count.innerHTML = 'Покупки - ' + quantity;
+    });
+    
     menu1.addEventListener("click", () => {
         document.getElementById("form").style.display = 'none';
         document.getElementById("main").style.display = 'none';
