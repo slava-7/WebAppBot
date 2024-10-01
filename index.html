@@ -171,7 +171,21 @@
             text-align: center;
         }
         
-        #Marg4 {
+         #Marg4 {
+            width: 150px;
+            height: 150px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        #Marg5 {
+            width: 150px;
+            height: 150px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        #Marg6 {
             width: 150px;
             height: 150px;
             padding: 20px;
@@ -275,6 +289,9 @@
     let btnMarg1 = document.getElementById("btnMarg1");
     let btnMarg2 = document.getElementById("btnMarg2");
     let btnMarg3 = document.getElementById("btnMarg3");
+    let btnMarg4 = document.getElementById("btnMarg4");
+    let btnMarg5 = document.getElementById("btnMarg5");
+    let btnMarg6 = document.getElementById("btnMarg6");
     let menu1 = document.getElementById("menu1");
     let quantity = 0;
     tg.expand();
@@ -295,6 +312,27 @@
     });
 
     btnMarg3.addEventListener("click", () => {
+        // alert("Ты в функции!");
+        var count = document.querySelector(".count");
+       quantity = quantity + 1;
+        count.innerHTML = 'Покупки - ' + quantity;
+    });
+    
+    btnMarg4.addEventListener("click", () => {
+        // alert("Ты в функции!");
+        var count = document.querySelector(".count");
+       quantity = quantity + 1;
+        count.innerHTML = 'Покупки - ' + quantity;
+    });
+
+    btnMarg5.addEventListener("click", () => {
+        // alert("Ты в функции!");
+        var count = document.querySelector(".count");
+       quantity = quantity + 1;
+        count.innerHTML = 'Покупки - ' + quantity;
+    });
+
+    btnMarg6.addEventListener("click", () => {
         // alert("Ты в функции!");
         var count = document.querySelector(".count");
        quantity = quantity + 1;
