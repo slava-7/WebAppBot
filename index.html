@@ -187,17 +187,43 @@
             text-align: center;
         }
 
+        #Marg7 {
+            width: 120px;
+            height: 100px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        #Marg8 {
+            width: 120px;
+            height: 100px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        #Marg9 {
+            width: 120px;
+            height: 100px;
+            padding: 20px;
+            text-align: center;
+        }
+
         .pizza1 {
             /*box-sizing: content-box;*/
             display: flex;
             flex-basis: auto;
             width: 110px;
             height: 110px;
-
-
         }
 
         .pizza2 {
+            display: flex;
+            flex-basis: auto;
+            width: 110px;
+            height: 110px;
+        }
+
+        .pizza3 {
             display: flex;
             flex-basis: auto;
             width: 110px;
@@ -267,6 +293,30 @@
         </form>
     </div>
 
+    <div class= "pizza2">
+        <form id="Marg7">
+            <div class="warning">
+                <img src="./PiecePizza2.png" alt="Logo">
+                <p>Маргарита</p>
+                <button class="btn btn-outline-warning" id="btnMarg7"> 150rub </button>
+            </div>
+        </form>
+        <form id="Marg8">
+            <div class="warning">
+                <img src="./PiecePizza2.png" alt="Logo">
+                <p>Маргарита</p>
+                <button class="btn btn-outline-warning" id="btnMarg8"> 150rub </button>
+            </div>
+        </form>
+        <form id="Marg9">
+            <div class="warning">
+                <img src="./PiecePizza2.png" alt="Logo">
+                <p>Маргарита</p>
+                <button class="btn btn-outline-warning" id="btnMarg9"> 150rub </button>
+            </div>
+        </form>
+    </div>
+
     <button class= "btn btn-outline-danger" id="buy">Оформить заказ</button>
 </div>
 <form id="form">
@@ -288,6 +338,9 @@
     let btnMarg4 = document.getElementById("btnMarg4");
     let btnMarg5 = document.getElementById("btnMarg5");
     let btnMarg6 = document.getElementById("btnMarg6");
+    let btnMarg7 = document.getElementById("btnMarg7");
+    let btnMarg8 = document.getElementById("btnMarg8");
+    let btnMarg9 = document.getElementById("btnMarg9");
     let menu1 = document.getElementById("menu1");
     let quantity = 0;
     tg.expand();
@@ -335,6 +388,27 @@
         count.innerHTML = 'Покупки - ' + quantity;
     });
     
+    btnMarg7.addEventListener("click", () => {
+        // alert("Ты в функции!");
+        var count = document.querySelector(".count");
+       quantity = quantity + 1;
+        count.innerHTML = 'Покупки - ' + quantity;
+    });
+
+    btnMarg8.addEventListener("click", () => {
+        // alert("Ты в функции!");
+        var count = document.querySelector(".count");
+       quantity = quantity + 1;
+        count.innerHTML = 'Покупки - ' + quantity;
+    });
+
+    btnMarg9.addEventListener("click", () => {
+        // alert("Ты в функции!");
+        var count = document.querySelector(".count");
+       quantity = quantity + 1;
+        count.innerHTML = 'Покупки - ' + quantity;
+    });
+
     menu1.addEventListener("click", () => {
         document.getElementById("form").style.display = 'none';
         document.getElementById("main").style.display = 'none';
