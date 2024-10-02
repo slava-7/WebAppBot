@@ -24,7 +24,7 @@
         }
 
         #main {
-                /*display: none;*/
+                display: none;
                 font-family: 'Montserrat', SansSerif;
                 width: 100%;
                 padding: 20px;
@@ -34,7 +34,7 @@
         }
 
         #menu {
-            display: none;
+            /*display: none;*/
             border: thick double indianred;
             border-radius: 30px;
             text-align: center;
@@ -251,7 +251,7 @@
             <div class="warning">
                 <img src="./PiecePizza2.png" alt="Logo">
                 <p>Маргарита</p>
-                <button class="btn btn-outline-warning" id="btnMarg1"> 150rub </button>
+                <button class="btn btn-outline-warning" id="btnMarg1" onclick="clik(btnMarg1)"> 150rub </button>
             </div>
         </form>
         <form id="Marg2">
@@ -332,82 +332,16 @@
     let tg = window.Telegram.WebApp;
     let buy = document.getElementById("buy");
     let order = document.getElementById("order");
-    let btnMarg1 = document.getElementById("btnMarg1");
-    let btnMarg2 = document.getElementById("btnMarg2");
-    let btnMarg3 = document.getElementById("btnMarg3");
-    let btnMarg4 = document.getElementById("btnMarg4");
-    let btnMarg5 = document.getElementById("btnMarg5");
-    let btnMarg6 = document.getElementById("btnMarg6");
-    let btnMarg7 = document.getElementById("btnMarg7");
-    let btnMarg8 = document.getElementById("btnMarg8");
-    let btnMarg9 = document.getElementById("btnMarg9");
     let menu1 = document.getElementById("menu1");
     let quantity = 0;
     tg.expand();
 
-
-    btnMarg1.addEventListener("click", () => {
-        // alert("Ты в функции!");
-        var count = document.querySelector(".count");
+    function clik(val) {
+       let count = document.querySelector(".count");
        quantity = quantity + 1;
-        count.innerHTML = 'Покупки - ' + quantity;
-    });
-
-    btnMarg2.addEventListener("click", () => {
-        // alert("Ты в функции!");
-        var count = document.querySelector(".count");
-       quantity = quantity + 1;
-        count.innerHTML = 'Покупки - ' + quantity;
-    });
-
-    btnMarg3.addEventListener("click", () => {
-        // alert("Ты в функции!");
-        var count = document.querySelector(".count");
-       quantity = quantity + 1;
-        count.innerHTML = 'Покупки - ' + quantity;
-    });
-
-    btnMarg4.addEventListener("click", () => {
-        // alert("Ты в функции!");
-        var count = document.querySelector(".count");
-       quantity = quantity + 1;
-        count.innerHTML = 'Покупки - ' + quantity;
-    });
-
-    btnMarg5.addEventListener("click", () => {
-        // alert("Ты в функции!");
-        var count = document.querySelector(".count");
-       quantity = quantity + 1;
-        count.innerHTML = 'Покупки - ' + quantity;
-    });
-
-    btnMarg6.addEventListener("click", () => {
-        // alert("Ты в функции!");
-        var count = document.querySelector(".count");
-       quantity = quantity + 1;
-        count.innerHTML = 'Покупки - ' + quantity;
-    });
-    
-    btnMarg7.addEventListener("click", () => {
-        // alert("Ты в функции!");
-        var count = document.querySelector(".count");
-       quantity = quantity + 1;
-        count.innerHTML = 'Покупки - ' + quantity;
-    });
-
-    btnMarg8.addEventListener("click", () => {
-        // alert("Ты в функции!");
-        var count = document.querySelector(".count");
-       quantity = quantity + 1;
-        count.innerHTML = 'Покупки - ' + quantity;
-    });
-
-    btnMarg9.addEventListener("click", () => {
-        // alert("Ты в функции!");
-        var count = document.querySelector(".count");
-       quantity = quantity + 1;
-        count.innerHTML = 'Покупки - ' + quantity;
-    });
+        count.innerHTML = 'Покупки - ' + quantity + " " + val;
+        val.innerHTML = quantity;
+    }
 
     menu1.addEventListener("click", () => {
         document.getElementById("form").style.display = 'none';
