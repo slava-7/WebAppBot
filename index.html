@@ -127,6 +127,21 @@
             padding: initial;
         }
 
+        #plusbtn {
+            display: none;
+            width: 30px;
+            height: 20px;
+            font-size: 12px;
+            padding: initial;
+        }
+
+        #minusbtn {
+            display: none;
+            width: 30px;
+            height: 20px;
+            font-size: 12px;
+            padding: initial;
+        }
 
         .warning {
                 border: 2px solid seashell;
@@ -251,8 +266,9 @@
             <div class="warning">
                 <img src="./PiecePizza2.png" alt="Logo">
                 <p>Маргарита</p>
-                <button class="btn btn-outline-warning" id="btnMarg1" onclick="oneclick(btnMarg1)"
-                        title="для уменьшения количества испльзуйте double click" contextmenu="dblclick(btnMarg1)"> 150rub </button>
+                <button class="btn btn-outline-warning" id="btnMarg1" onclick="oneclick(btnMarg1)"> 150rub </button>
+                <button class="btn btn-outline-warning" id="plusbtn" onclick="oneclick(plusbtn)"> + </button>
+                <button class="btn btn-outline-warning" id="minusbtn" onclick="oneclick(minusbtn)"> - </button>
             </div>
         </form>
         <form id="Marg2">
@@ -294,7 +310,7 @@
         </form>
     </div>
 
-    <div class= "pizza2">
+    <div class= "pizza3">
         <form id="Marg7">
             <div class="warning">
                 <img src="./PiecePizza2.png" alt="Logo">
@@ -342,6 +358,9 @@
        quantity = quantity + 1;
         count.innerHTML = 'Покупки - ' + quantity + " " + val;
         val.innerHTML = quantity;
+        val.style.display = 'none'
+        document.getElementById("plusbtn").style.display = 'block';
+        document.getElementById("minusbtn").style.display = 'block';
     }
 
     function dblclick(val) {
