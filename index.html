@@ -251,7 +251,8 @@
             <div class="warning">
                 <img src="./PiecePizza2.png" alt="Logo">
                 <p>Маргарита</p>
-                <button class="btn btn-outline-warning" id="btnMarg1" onclick="clik(btnMarg1)"> 150rub </button>
+                <button class="btn btn-outline-warning" id="btnMarg1" onclick="oneclick(btnMarg1)"
+                        title="для уменьшения количества испльзуйте double click" ondblclick="dblclick(btnMarg1)"> 150rub </button>
             </div>
         </form>
         <form id="Marg2">
@@ -336,9 +337,16 @@
     let quantity = 0;
     tg.expand();
 
-    function clik(val) {
+    function oneclick(val) {
        let count = document.querySelector(".count");
        quantity = quantity + 1;
+        count.innerHTML = 'Покупки - ' + quantity + " " + val;
+        val.innerHTML = quantity;
+    }
+
+    function dblclick(val) {
+        let count = document.querySelector(".count");
+       quantity = quantity - 1;
         count.innerHTML = 'Покупки - ' + quantity + " " + val;
         val.innerHTML = quantity;
     }
