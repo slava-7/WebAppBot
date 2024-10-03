@@ -359,11 +359,12 @@
     let order = document.getElementById("order");
     let menu1 = document.getElementById("menu1");
     let quantity = 0;
+    let Name = '';
     tg.expand();
 
     function oneclick(btn1,btn2,btn3) {
        let count = document.querySelector(".count");
-       let Name = count.innerText;
+       Name = count.innerText;
        quantity = quantity + 1;
         count.innerHTML = Name + ' ' + quantity;
         btn1.style.display = 'none';
@@ -374,7 +375,7 @@
 
     function dblclick(val, val1, val2) {
         let count = document.querySelector(".count");
-        let Name = count.innerText;
+        Name = count.innerText;
         quantity = quantity - 1;
         count.innerHTML = Name + ' ' + quantity;
         btn1.style.display = 'none';
