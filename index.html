@@ -271,7 +271,7 @@
         <form id="Marg1">
             <div class="warning">
                 <img src="./PiecePizza2.png" alt="Logo">
-                <p class="count">Маргарита</p>          
+                <p class="count">Margherita</p>          
                 <button class="btn btn-outline-warning" id="btnMarg1" onclick="oneclick(btnMarg1, plusbtn, minusbtn)"> 150rub </button>
                 <div id = "btnPlMin">
                     <button class="btn btn-outline-warning" id="plusbtn" onclick="oneclick(btnMarg1, plusbtn, minusbtn)"> + </button>
@@ -282,7 +282,7 @@
         <form id="Marg2">
             <div class="warning">
                 <img src="./PiecePizza2.png" alt="Logo">
-                <p>Маргарита</p>
+                <p>Formaggi</p>
                 <button class="btn btn-outline-warning" id="btnMarg2"> 150rub </button>
             </div>
         </form>
@@ -363,8 +363,10 @@
 
     function oneclick(btn1,btn2,btn3) {
        let count = document.querySelector(".count");
+       let Name = count.innerText;
        quantity = quantity + 1;
-        count.innerHTML = 'Маргарита ' + quantity;
+        count.innerHTML = Name + ' ' + quantity;
+        btn1.style.display = 'none';
         btn1.style.display = 'none';
         btn2.style.display = 'block';
         btn3.style.display = 'block';
@@ -372,8 +374,10 @@
 
     function dblclick(val, val1, val2) {
         let count = document.querySelector(".count");
-       quantity = quantity - 1;
-        count.innerHTML = 'Маргарита ' + quantity;
+        let Name = count.innerText;
+        quantity = quantity - 1;
+        count.innerHTML = Name + ' ' + quantity;
+        btn1.style.display = 'none';
         val.style.display = 'block';
         val1.style.display = 'block';
         if (quantity == 0) {
