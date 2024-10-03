@@ -359,14 +359,14 @@
     let order = document.getElementById("order");
     let menu1 = document.getElementById("menu1");
     let quantity = 0;
-    let Name = '';
+    let Namep = '';
     tg.expand();
 
     function oneclick(btn1,btn2,btn3) {
        let count = document.querySelector(".count");
        Name = count.innerText;
        quantity = quantity + 1;
-        count.innerHTML = Name + ' ' + quantity;
+        count.innerHTML = 'Namep' + ' ' + quantity;
         btn1.style.display = 'none';
         btn1.style.display = 'none';
         btn2.style.display = 'block';
@@ -377,7 +377,7 @@
         let count = document.querySelector(".count");
         Name = count.innerText;
         quantity = quantity - 1;
-        count.innerHTML = Name + ' ' + quantity;
+        count.innerHTML = 'Namep' + ' ' + quantity;
         btn1.style.display = 'none';
         val.style.display = 'block';
         val1.style.display = 'block';
