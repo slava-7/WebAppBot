@@ -268,7 +268,7 @@
                 <p>Маргарита</p>
                 <button class="btn btn-outline-warning" id="btnMarg1" onclick="oneclick(btnMarg1, plusbtn, minusbtn)"> 150rub </button>
                 <button class="btn btn-outline-warning" id="plusbtn" onclick="oneclick(btnMarg1, plusbtn, minusbtn)"> + </button>
-                <button class="btn btn-outline-warning" id="minusbtn" onclick="dblclick(minusbtn, plusbtn)"> - </button>
+                <button class="btn btn-outline-warning" id="minusbtn" onclick="dblclick(minusbtn, plusbtn, btnMarg1)"> - </button>
             </div>
         </form>
         <form id="Marg2">
@@ -362,12 +362,17 @@
         btn3.style.display = 'block';
     }
 
-    function dblclick(val, val1) {
+    function dblclick(val, val1, val2) {
         let count = document.querySelector(".count");
        quantity = quantity - 1;
         count.innerHTML = 'Покупки - ' + quantity + " " + val;
         val.style.display = 'block';
         val1.style.display = 'block';
+        if (quantity == 0) {
+            val.style.display = 'none';
+            val1.style.display = 'none';
+            val2.style.display = 'block';
+        }
     }
 
     menu1.addEventListener("click", () => {
