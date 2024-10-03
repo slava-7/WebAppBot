@@ -271,11 +271,11 @@
         <form id="Marg1">
             <div class="warning">
                 <img src="./PiecePizza2.png" alt="Logo">
-                <p class="count">Margherita</p>          
-                <button class="btn btn-outline-warning" id="btnMarg1" onclick="oneclick(btnMarg1, plusbtn, minusbtn)"> 150rub </button>
+                <p class="count">Margherita</p>
+                <button class="btn btn-outline-warning" id="btnMarg1" onclick="oneclick(btnMarg1, plusbtn, minusbtn,Margherita)"> 150rub </button>
                 <div id = "btnPlMin">
-                    <button class="btn btn-outline-warning" id="plusbtn" onclick="oneclick(btnMarg1, plusbtn, minusbtn)"> + </button>
-                    <button class="btn btn-outline-warning" id="minusbtn" onclick="dblclick(minusbtn, plusbtn, btnMarg1)"> - </button>
+                    <button class="btn btn-outline-warning" id="plusbtn" onclick="oneclick(btnMarg1, plusbtn, minusbtn,Margherita)"> + </button>
+                    <button class="btn btn-outline-warning" id="minusbtn" onclick="dblclick(minusbtn, plusbtn, btnMarg1,Margherita)"> - </button>
                 </div>
             </div>
         </form>
@@ -359,12 +359,10 @@
     let order = document.getElementById("order");
     let menu1 = document.getElementById("menu1");
     let quantity = 0;
-    let namep = '';
     tg.expand();
 
-    function oneclick(btn1,btn2,btn3) {
+    function oneclick(btn1,btn2,btn3,namep) {
        let count = document.querySelector(".count");
-       namep = count.innerText;
        quantity = quantity + 1;
         count.innerHTML = quantity + " " + namep;
         btn1.style.display = 'none';
@@ -373,9 +371,8 @@
         btn3.style.display = 'block';
     }
 
-    function dblclick(val, val1, val2) {
+    function dblclick(val, val1, val2,namep) {
         let count = document.querySelector(".count");
-        namep = count.innerText;
         quantity = quantity - 1;
         count.innerHTML = quantity + " " + namep;
         btn1.style.display = 'none';
