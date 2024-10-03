@@ -266,7 +266,7 @@
             <div class="warning">
                 <img src="./PiecePizza2.png" alt="Logo">
                 <p>Маргарита</p>
-                <button class="btn btn-outline-warning" id="btnMarg1" onclick="oneclick(btnMarg1)"> 150rub </button>
+                <button class="btn btn-outline-warning" id="btnMarg1" onclick="oneclick(btnMarg1, plusbtn, minusbtn)"> 150rub </button>
                 <button class="btn btn-outline-warning" id="plusbtn" onclick="oneclick(plusbtn)"> + </button>
                 <button class="btn btn-outline-warning" id="minusbtn" onclick="dblclick(minusbtn)"> - </button>
             </div>
@@ -353,14 +353,14 @@
     let quantity = 0;
     tg.expand();
 
-    function oneclick(val) {
+    function oneclick(btn1,btn2,btn3) {
        let count = document.querySelector(".count");
        quantity = quantity + 1;
-        count.innerHTML = 'Покупки - ' + quantity + " " + val;
-        val.innerHTML = quantity;
-        val.style.display = 'none'
-        document.getElementById("plusbtn").style.display = 'block';
-        document.getElementById("minusbtn").style.display = 'block';
+        count.innerHTML = 'Покупки - ' + quantity + " " + btn1;
+        btn1.innerHTML = quantity;
+        btn1.style.display = 'none'
+        document.getElementById("btn2").style.display = 'block';
+        document.getElementById("btn3").style.display = 'block';
     }
 
     function dblclick(val) {
