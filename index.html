@@ -357,7 +357,6 @@
        let count = document.querySelector(".count");
        quantity = quantity + 1;
         count.innerHTML = 'Покупки - ' + quantity + " " + btn1;
-        btn1.innerHTML = quantity;
         btn1.style.display = 'none';
         btn2.style.display = 'block';
         btn3.style.display = 'block';
@@ -367,7 +366,6 @@
         let count = document.querySelector(".count");
        quantity = quantity - 1;
         count.innerHTML = 'Покупки - ' + quantity + " " + val;
-        val.innerHTML = quantity;
     }
 
     menu1.addEventListener("click", () => {
