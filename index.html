@@ -364,7 +364,7 @@
     function oneclick(btn1,btn2,btn3) {
        let count = document.querySelector(".count");
        quantity = quantity + 1;
-        count.innerHTML = 'Покупки - ' + quantity + " " + btn1;
+        count.innerHTML = 'Покупки - ' + quantity + " " + btn1[2];
         btn1.style.display = 'none';
         btn2.style.display = 'block';
         btn3.style.display = 'block';
@@ -373,7 +373,7 @@
     function dblclick(val, val1, val2) {
         let count = document.querySelector(".count");
        quantity = quantity - 1;
-        count.innerHTML = 'Покупки - ' + quantity + " " + val;
+        count.innerHTML = 'Покупки - ' + quantity + " " + val[2];
         val.style.display = 'block';
         val1.style.display = 'block';
         if (quantity == 0) {
