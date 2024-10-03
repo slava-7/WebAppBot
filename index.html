@@ -245,6 +245,11 @@
             height: 110px;
         }
 
+        #btnPlMin {
+           display: flex;
+           flex-basis: auto; 
+        }
+    
     </style>
 
 </head>
@@ -267,7 +272,7 @@
                 <img src="./PiecePizza2.png" alt="Logo">
                 <p>Маргарита</p>
                 <button class="btn btn-outline-warning" id="btnMarg1" onclick="oneclick(btnMarg1, plusbtn, minusbtn)"> 150rub </button>
-                <div>
+                <div id = "btnPlMin">
                     <button class="btn btn-outline-warning" id="plusbtn" onclick="oneclick(btnMarg1, plusbtn, minusbtn)"> + </button>
                     <button class="btn btn-outline-warning" id="minusbtn" onclick="dblclick(minusbtn, plusbtn, btnMarg1)"> - </button>
                 </div>
