@@ -373,10 +373,11 @@
     function dblclick(val, val1, val2) {
         let count = document.querySelector(".count");
        quantity = quantity - 1;
-        count.innerHTML = ' ' + quantity;
+        count.innerHTML = 'Маргарита ' + quantity;
         val.style.display = 'block';
         val1.style.display = 'block';
         if (quantity == 0) {
+            count.innerHTML = 'Маргарита';
             val.style.display = 'none';
             val1.style.display = 'none';
             val2.style.display = 'block';
