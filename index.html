@@ -272,10 +272,10 @@
             <div class="warning">
                 <img src="./PiecePizza2.png" alt="Logo">
                 <p class="count">Margherita</p>
-                <button class="btn btn-outline-warning" id="btnMarg1" onclick="oneclick(btnMarg1, plusbtn, minusbtn,Margherita)"> 150rub </button>
+                <button class="btn btn-outline-warning" id="btnMarg1" onclick="oneclick(btnMarg1, plusbtn, minusbtn, Margherita)"> 150rub </button>
                 <div id = "btnPlMin">
-                    <button class="btn btn-outline-warning" id="plusbtn" onclick="oneclick(btnMarg1, plusbtn, minusbtn,Margherita)"> + </button>
-                    <button class="btn btn-outline-warning" id="minusbtn" onclick="dblclick(minusbtn, plusbtn, btnMarg1,Margherita)"> - </button>
+                    <button class="btn btn-outline-warning" id="plusbtn" onclick="oneclick(btnMarg1, plusbtn, minusbtn, Margherita)"> + </button>
+                    <button class="btn btn-outline-warning" id="minusbtn" onclick="dblclick(minusbtn, plusbtn, btnMarg1, Margherita)"> - </button>
                 </div>
             </div>
         </form>
@@ -361,23 +361,22 @@
     let quantity = 0;
     tg.expand();
 
-    function oneclick(btn1,btn2,btn3,namep) {
+    function oneclick(btn1, btn2, btn3, namep) {
        let count = document.querySelector(".count");
        quantity = quantity + 1;
         count.innerHTML = quantity + " " + namep;
-        btn1.style.display = 'none';
         btn1.style.display = 'none';
         btn2.style.display = 'block';
         btn3.style.display = 'block';
     }
 
-    function dblclick(val, val1, val2,namep) {
+    function dblclick(val, val1, val2, namep) {
         let count = document.querySelector(".count");
         quantity = quantity - 1;
         count.innerHTML = quantity + " " + namep;
-        btn1.style.display = 'none';
-        val.style.display = 'block';
+        val.style.display = 'none';
         val1.style.display = 'block';
+        val2.style.display = 'block';
         if (quantity == 0) {
             count.innerHTML = namep;
             val.style.display = 'none';
