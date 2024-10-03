@@ -364,9 +364,9 @@
 
     function oneclick(btn1,btn2,btn3) {
        let count = document.querySelector(".count");
-       Name = count.innerText;
+       Namep = count.innerText;
        quantity = quantity + 1;
-        count.innerHTML = 'Namep' + ' ' + quantity;
+        count.innerHTML = Namep + ' ' + quantity;
         btn1.style.display = 'none';
         btn1.style.display = 'none';
         btn2.style.display = 'block';
@@ -375,14 +375,14 @@
 
     function dblclick(val, val1, val2) {
         let count = document.querySelector(".count");
-        Name = count.innerText;
+        Namep = count.innerText;
         quantity = quantity - 1;
-        count.innerHTML = 'Namep' + ' ' + quantity;
+        count.innerHTML = Namep + ' ' + quantity;
         btn1.style.display = 'none';
         val.style.display = 'block';
         val1.style.display = 'block';
         if (quantity == 0) {
-            count.innerHTML = 'Маргарита';
+            count.innerHTML = Namep;
             val.style.display = 'none';
             val1.style.display = 'none';
             val2.style.display = 'block';
