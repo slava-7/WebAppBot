@@ -41,7 +41,7 @@
             width: 100%;
         }
 
-        
+
         h1 {
             margin-top: 20px;
             margin-bottom: 10px;
@@ -250,7 +250,7 @@
            display: flex;
            flex-basis: auto;
         }
-    
+
     </style>
 
 </head>
@@ -272,6 +272,7 @@
             <div class="warning">
                 <img src="./PiecePizza2.png" alt="Logo">
                 <p>Маргарита</p>
+                <span class="count"></span>
                 <button class="btn btn-outline-warning" id="btnMarg1" onclick="oneclick(btnMarg1, plusbtn, minusbtn)"> 150rub </button>
                 <div id = "btnPlMin">
                     <button class="btn btn-outline-warning" id="plusbtn" onclick="oneclick(btnMarg1, plusbtn, minusbtn)"> + </button>
@@ -364,7 +365,7 @@
     function oneclick(btn1,btn2,btn3) {
        let count = document.querySelector(".count");
        quantity = quantity + 1;
-        count.innerHTML = 'Покупки - ' + quantity + " " + btn1[2];
+        count.innerHTML = ' ' + quantity;
         btn1.style.display = 'none';
         btn2.style.display = 'block';
         btn3.style.display = 'block';
@@ -373,7 +374,7 @@
     function dblclick(val, val1, val2) {
         let count = document.querySelector(".count");
        quantity = quantity - 1;
-        count.innerHTML = 'Покупки - ' + quantity + " " + val[2];
+        count.innerHTML = ' ' + quantity;
         val.style.display = 'block';
         val1.style.display = 'block';
         if (quantity == 0) {
