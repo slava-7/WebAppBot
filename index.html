@@ -145,6 +145,14 @@
             padding: initial;
         }
 
+        btnHaf {
+            display: none;
+            width: 30px;
+            height: 20px;
+            font-size: 12px;
+            padding: initial;
+        }
+
         .warning {
                 border: 2px solid seashell;
                 border-radius: 10px;
@@ -162,68 +170,13 @@
                 text-align: initial;
         }
 
-        #Marg1 {
+        .formPizza {
             width: 120px;
             height: 100px;
             padding: 20px;
             text-align: center;
         }
 
-        #Marg2 {
-            width: 120px;
-            height: 100px;
-            padding: 20px;
-            text-align: center;
-        }
-
-        #Marg3 {
-            width: 120px;
-            height: 100px;
-            padding: 20px;
-            text-align: center;
-        }
-
-         #Marg4 {
-            width: 120px;
-            height: 100px;
-            padding: 20px;
-            text-align: center;
-        }
-
-        #Marg5 {
-            width: 120px;
-            height: 100px;
-            padding: 20px;
-            text-align: center;
-        }
-
-        #Marg6 {
-            width: 120px;
-            height: 100px;
-            padding: 20px;
-            text-align: center;
-        }
-
-        #Marg7 {
-            width: 120px;
-            height: 100px;
-            padding: 20px;
-            text-align: center;
-        }
-
-        #Marg8 {
-            width: 120px;
-            height: 100px;
-            padding: 20px;
-            text-align: center;
-        }
-
-        #Marg9 {
-            width: 120px;
-            height: 100px;
-            padding: 20px;
-            text-align: center;
-        }
 
         .pizza1 {
             /*box-sizing: content-box;*/
@@ -247,14 +200,17 @@
             height: 110px;
         }
 
-        #btnPlMin {
+        .btnPlMin {
            display: flex;
            flex-basis: auto;
         }
 
-        #btnPlMinF {
-            display: flex;
-           flex-basis: auto;
+        .btnPlMin button {
+            display: none;
+            width: 30px;
+            height: 20px;
+            font-size: 12px;
+            padding: initial;
         }
 
     </style>
@@ -274,29 +230,29 @@
     <h1><i>Pizza</i></h1>
 <!--     <span class="count"></span> -->
     <div class= "pizza1">
-        <form id="Marg1">
+        <form class="formPizza">
             <div class="warning">
                 <img src="./PiecePizza2.png" alt="Logo">
-                <p class="count">Margherita</p>
+                <p class="count" title="Margherita">Margherita</p>
                 <button class="btn btn-outline-warning" id="btnMarg1" onclick="oneclick(btnMarg1, plusbtn, minusbtn)"> 150rub </button>
-                <div id = "btnPlMin">
+                <div class = "btnPlMin">
                     <button class="btn btn-outline-warning" id="plusbtn" onclick="oneclick(btnMarg1, plusbtn, minusbtn)"> + </button>
                     <button class="btn btn-outline-warning" id="minusbtn" onclick="dblclick(minusbtn, plusbtn, btnMarg1)"> - </button>
                 </div>
             </div>
         </form>
-        <form id="Marg2">
+        <form class="formPizza">
             <div class="warning">
                 <img src="./PiecePizza2.png" alt="Logo">
                 <p class="count">Formaggi</p>
                 <button class="btn btn-outline-warning" id="btnMarg2" onclick="oneclick(btnMarg2, plusbtnF, minusbtnF)"> 150rub </button>
-                <div id = "btnPlMinF">
-                    <button class="btn btn-outline-warning" id="plusbtnF" onclick="oneclick(btnMarg2, plusbtnF, minusbtnF)"> + </button>
-                    <button class="btn btn-outline-warning" id="minusbtnF" onclick="dblclick(minusbtnF, plusbtnF, btnMarg2)"> - </button>
+                <div class = "btnPlMin">
+                    <button class="btn btn-outline-warning"  id="plusbtnF" onclick="oneclick(btnMarg2, plusbtnF, minusbtnF)"> + </button>
+                    <button class="btn btn-outline-warning"  id="minusbtnF" onclick="dblclick(minusbtnF, plusbtnF, btnMarg2)"> - </button>
                 </div>
             </div>
         </form>
-            <form id="Marg3">
+            <form class="formPizza">
                 <div class="warning">
                     <img src="./PiecePizza2.png" alt="Logo">
                     <p>Маргарита</p>
@@ -305,21 +261,21 @@
             </form>
     </div>
     <div class= "pizza2">
-        <form id="Marg4">
+        <form class="formPizza">
             <div class="warning">
                 <img src="./PiecePizza2.png" alt="Logo">
                 <p>Маргарита</p>
                 <button class="btn btn-outline-warning" id="btnMarg4"> 150rub </button>
             </div>
         </form>
-        <form id="Marg5">
+        <form class="formPizza">
             <div class="warning">
                 <img src="./PiecePizza2.png" alt="Logo">
                 <p>Маргарита</p>
                 <button class="btn btn-outline-warning" id="btnMarg5"> 150rub </button>
             </div>
         </form>
-        <form id="Marg6">
+        <form class="formPizza">
             <div class="warning">
                 <img src="./PiecePizza2.png" alt="Logo">
                 <p>Маргарита</p>
@@ -329,21 +285,21 @@
     </div>
 
     <div class= "pizza3">
-        <form id="Marg7">
+        <form class="formPizza">
             <div class="warning">
                 <img src="./PiecePizza2.png" alt="Logo">
                 <p>Маргарита</p>
                 <button class="btn btn-outline-warning" id="btnMarg7"> 150rub </button>
             </div>
         </form>
-        <form id="Marg8">
+        <form class="formPizza">
             <div class="warning">
                 <img src="./PiecePizza2.png" alt="Logo">
                 <p>Маргарита</p>
                 <button class="btn btn-outline-warning" id="btnMarg8"> 150rub </button>
             </div>
         </form>
-        <form id="Marg9">
+        <form class="formPizza">
             <div class="warning">
                 <img src="./PiecePizza2.png" alt="Logo">
                 <p>Маргарита</p>
@@ -374,7 +330,7 @@
     function oneclick(btn1, btn2, btn3, namep) {
        let count = document.querySelector(".count");
        quantity = quantity + 1;
-        count.innerHTML = quantity + " " + namep;
+        count.innerHTML = quantity + " " + count.title;
         btn1.style.display = 'none';
         btn2.style.display = 'block';
         btn3.style.display = 'block';
@@ -383,12 +339,12 @@
     function dblclick(val, val1, val2, namep) {
         let count = document.querySelector(".count");
         quantity = quantity - 1;
-        count.innerHTML = quantity + " " + namep;
+        count.innerHTML = quantity + " " + count.title;
         val2.style.display = 'none';
         val1.style.display = 'block';
         val.style.display = 'block';
         if (quantity == 0) {
-            count.innerHTML = namep;
+            count.innerHTML = quantity + " " + count.title;
             val.style.display = 'none';
             val1.style.display = 'none';
             val2.style.display = 'block';
