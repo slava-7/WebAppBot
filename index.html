@@ -324,28 +324,31 @@
     let buy = document.getElementById("buy");
     let order = document.getElementById("order");
     let menu1 = document.getElementById("menu1");
+    let idcoll = [Margherita,Formaggi];
     let quantity = 0;
     tg.expand();
 
     function oneclick(btn1, btn2, btn3,num) {
        // let count = document.querySelector(".count");
-       let count = document.getElementsByClassName("count");
-        quantity = quantity + 1;
-        count.innerHTML = quantity + " " + count[num].innerText;
+       let id = idcoll[num].innerText;
+        let label = document.getElementById(id);
+       quantity = quantity + 1;
+        label.innerHTML = quantity + " " + id;
         btn1.style.display = 'none';
         btn2.style.display = 'block';
         btn3.style.display = 'block';
     }
 
     function dblclick(val, val1, val2,num) {
-        let count = document.querySelector(".count");
+        let id = idcoll[num].innerText;
+        let label = document.getElementById(id);
         quantity = quantity - 1;
-        count.innerHTML = quantity + " " + count[num].innerText;
+        label.innerHTML = quantity + " " + id;
         val2.style.display = 'none';
         val1.style.display = 'block';
         val.style.display = 'block';
         if (quantity == 0) {
-            count.innerHTML = quantity + " " + count[num].innerText;
+            label.innerHTML = quantity + " " + id;
             val.style.display = 'none';
             val1.style.display = 'none';
             val2.style.display = 'block';
