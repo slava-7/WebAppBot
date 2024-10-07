@@ -60,7 +60,7 @@
         }
 
         #order {
-            border: 0px;
+            border: 0;
             border-radius: 5px;
             margin-top: 30px;
             height: 60px;
@@ -234,10 +234,10 @@
             <div class="warning">
                 <img src="./PiecePizza2.png" alt="Logo">
                 <p class="count" id="Margherita">Margherita</p>
-                <button class="btn btn-outline-warning" id="btnMarg1" onclick="oneclick(btnMarg1, plusbtn, minusbtn,0)"> 150rub </button>
+                <button class="btn btn-outline-warning" id="btnMarg1" onclick="oneclick(btnMarg1, plusbtn, minusbtn,0,numMarg=0)"> 150rub </button>
                 <div class = "btnPlMin">
-                    <button class="btn btn-outline-warning" id="plusbtn" onclick="oneclick(btnMarg1, plusbtn, minusbtn,0)"> + </button>
-                    <button class="btn btn-outline-warning" id="minusbtn" onclick="dblclick(minusbtn, plusbtn, btnMarg1,0)"> - </button>
+                    <button class="btn btn-outline-warning" id="plusbtn" onclick="oneclick(btnMarg1, plusbtn, minusbtn,0,numMarg=0)"> + </button>
+                    <button class="btn btn-outline-warning" id="minusbtn" onclick="dblclick(minusbtn, plusbtn, btnMarg1,0,numMarg=0)"> - </button>
                 </div>
             </div>
         </form>
@@ -245,10 +245,10 @@
             <div class="warning">
                 <img src="./PiecePizza2.png" alt="Logo">
                 <p class="count" id="Formaggi">Formaggi</p>
-                <button class="btn btn-outline-warning" id="btnMarg2" onclick="oneclick(btnMarg2, plusbtnF, minusbtnF,1)"> 150rub </button>
+                <button class="btn btn-outline-warning" id="btnMarg2" onclick="oneclick(btnMarg2, plusbtnF, minusbtnF,1,numForm=0)"> 150rub </button>
                 <div class = "btnPlMin">
-                    <button class="btn btn-outline-warning"  id="plusbtnF" onclick="oneclick(btnMarg2, plusbtnF, minusbtnF,1)"> + </button>
-                    <button class="btn btn-outline-warning"  id="minusbtnF" onclick="dblclick(minusbtnF, plusbtnF, btnMarg2,1)"> - </button>
+                    <button class="btn btn-outline-warning"  id="plusbtnF" onclick="oneclick(btnMarg2, plusbtnF, minusbtnF,1,numForm=0)"> + </button>
+                    <button class="btn btn-outline-warning"  id="minusbtnF" onclick="dblclick(minusbtnF, plusbtnF, btnMarg2,1.,numForm=0)"> - </button>
                 </div>
             </div>
         </form>
@@ -325,30 +325,30 @@
     let order = document.getElementById("order");
     let menu1 = document.getElementById("menu1");
     let idcoll = [Margherita,Formaggi];
-    let quantity = 0;
+    // let quantity = 0;
     tg.expand();
 
-    function oneclick(btn1, btn2, btn3,num) {
+    function oneclick(btn1, btn2, btn3,num,number) {
        // let count = document.querySelector(".count");
        let id = idcoll[num].innerText;
-        let label = document.getElementById(id);
-       quantity = quantity + 1;
-        label.innerHTML = quantity + " " + id;
+        // let label = document.getElementById(id);
+       number = number + 1;
+        idcoll[num].innerHTML = number + " " + id;
         btn1.style.display = 'none';
         btn2.style.display = 'block';
         btn3.style.display = 'block';
     }
 
-    function dblclick(val, val1, val2,num) {
+    function dblclick(val, val1, val2,num,number) {
         let id = idcoll[num].innerText;
-        let label = document.getElementById(id);
-        quantity = quantity - 1;
-        label.innerHTML = quantity + " " + id;
+        // let label = document.getElementById(id);
+        number = number - 1;
+        idcoll[num].innerHTML = number + " " + id;
         val2.style.display = 'none';
         val1.style.display = 'block';
         val.style.display = 'block';
-        if (quantity == 0) {
-            label.innerHTML = quantity + " " + id;
+        if (number === 0) {
+            idcoll[num].innerHTML = number + " " + id;
             val.style.display = 'none';
             val1.style.display = 'none';
             val2.style.display = 'block';
