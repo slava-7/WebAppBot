@@ -233,22 +233,22 @@
         <form class="formPizza">
             <div class="warning">
                 <img src="./PiecePizza2.png" alt="Logo">
-                <p class="count" title="Margherita">Margherita</p>
-                <button class="btn btn-outline-warning" id="btnMarg1" onclick="oneclick(btnMarg1, plusbtn, minusbtn)"> 150rub </button>
+                <p class="count" id="Margherita">Margherita</p>
+                <button class="btn btn-outline-warning" id="btnMarg1" onclick="oneclick(btnMarg1, plusbtn, minusbtn,0)"> 150rub </button>
                 <div class = "btnPlMin">
-                    <button class="btn btn-outline-warning" id="plusbtn" onclick="oneclick(btnMarg1, plusbtn, minusbtn)"> + </button>
-                    <button class="btn btn-outline-warning" id="minusbtn" onclick="dblclick(minusbtn, plusbtn, btnMarg1)"> - </button>
+                    <button class="btn btn-outline-warning" id="plusbtn" onclick="oneclick(btnMarg1, plusbtn, minusbtn,0)"> + </button>
+                    <button class="btn btn-outline-warning" id="minusbtn" onclick="dblclick(minusbtn, plusbtn, btnMarg1,0)"> - </button>
                 </div>
             </div>
         </form>
         <form class="formPizza">
             <div class="warning">
                 <img src="./PiecePizza2.png" alt="Logo">
-                <p class="count">Formaggi</p>
-                <button class="btn btn-outline-warning" id="btnMarg2" onclick="oneclick(btnMarg2, plusbtnF, minusbtnF)"> 150rub </button>
+                <p class="count" id="Formaggi">Formaggi</p>
+                <button class="btn btn-outline-warning" id="btnMarg2" onclick="oneclick(btnMarg2, plusbtnF, minusbtnF,1)"> 150rub </button>
                 <div class = "btnPlMin">
-                    <button class="btn btn-outline-warning"  id="plusbtnF" onclick="oneclick(btnMarg2, plusbtnF, minusbtnF)"> + </button>
-                    <button class="btn btn-outline-warning"  id="minusbtnF" onclick="dblclick(minusbtnF, plusbtnF, btnMarg2)"> - </button>
+                    <button class="btn btn-outline-warning"  id="plusbtnF" onclick="oneclick(btnMarg2, plusbtnF, minusbtnF,1)"> + </button>
+                    <button class="btn btn-outline-warning"  id="minusbtnF" onclick="dblclick(minusbtnF, plusbtnF, btnMarg2,1)"> - </button>
                 </div>
             </div>
         </form>
@@ -327,24 +327,25 @@
     let quantity = 0;
     tg.expand();
 
-    function oneclick(btn1, btn2, btn3, namep) {
-       let count = document.querySelector(".count");
-       quantity = quantity + 1;
-        count.innerHTML = quantity + " " + count.title;
+    function oneclick(btn1, btn2, btn3,num) {
+       // let count = document.querySelector(".count");
+       let count = document.getElementsByClassName("count");
+        quantity = quantity + 1;
+        count.innerHTML = quantity + " " + count[num].innerText;
         btn1.style.display = 'none';
         btn2.style.display = 'block';
         btn3.style.display = 'block';
     }
 
-    function dblclick(val, val1, val2, namep) {
+    function dblclick(val, val1, val2,num) {
         let count = document.querySelector(".count");
         quantity = quantity - 1;
-        count.innerHTML = quantity + " " + count.title;
+        count.innerHTML = quantity + " " + count[num].innerText;
         val2.style.display = 'none';
         val1.style.display = 'block';
         val.style.display = 'block';
         if (quantity == 0) {
-            count.innerHTML = count.title;
+            count.innerHTML = quantity + " " + count[num].innerText;
             val.style.display = 'none';
             val1.style.display = 'none';
             val2.style.display = 'block';
