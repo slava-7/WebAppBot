@@ -333,7 +333,7 @@
        let id = idcoll[num].innerText;
         // let label = document.getElementById(id);
        number = number + 1;
-        idcoll[num].innerHTML = number + " " + id;
+        idcoll[num].innerHTML = number;
         btn1.style.display = 'none';
         btn2.style.display = 'block';
         btn3.style.display = 'block';
@@ -343,12 +343,12 @@
         let id = idcoll[num].innerText;
         // let label = document.getElementById(id);
         number = number - 1;
-        idcoll[num].innerHTML = number + " " + id;
+        idcoll[num].innerHTML = number;
         val2.style.display = 'none';
         val1.style.display = 'block';
         val.style.display = 'block';
         if (number === 0) {
-            idcoll[num].innerHTML = number + " " + id;
+            idcoll[num].innerHTML = number;
             val.style.display = 'none';
             val1.style.display = 'none';
             val2.style.display = 'block';
@@ -383,7 +383,7 @@
                 document.getElementById("error").innerText = "Заполните поле Email";
                 return;
             }
-            if (email.includes('@') == false) {
+            if (email.includes('@') === false) {
                 document.getElementById("error").innerText = "Поле Email заполненно не верно";
                 return;
             }
