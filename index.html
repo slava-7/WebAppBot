@@ -335,7 +335,7 @@
         let id = idcoll[num].innerText;
         // let label = document.getElementById(id);
         quant[num] = quant[num] + 1;
-        idcoll[num].innerHTML = quant[num] + " " + id;
+        idcoll[num].innerHTML = quant[num] + " " + "id";
         btn1.style.display = 'none';
         btn2.style.display = 'block';
         btn3.style.display = 'block';
@@ -345,12 +345,12 @@
         let id = idcoll[num].innerText;
         // let label = document.getElementById(id);
         quant[num] = quant[num] - 1;
-        idcoll[num].innerHTML = quant[num] + " " + id;
+        idcoll[num].innerHTML = quant[num] + " " + "id";
         val2.style.display = 'none';
         val1.style.display = 'block';
         val.style.display = 'block';
         if (quant[num] === 0) {
-            idcoll[num].innerHTML = quant[num] + " " + id;
+            idcoll[num].innerHTML = id;
             val.style.display = 'none';
             val1.style.display = 'none';
             val2.style.display = 'block';
