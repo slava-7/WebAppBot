@@ -388,6 +388,12 @@
     });
 
     buy.addEventListener("click", () => {
+        
+        for (i = 0; i < 9; i++) {
+            if(quant[i] != 0) {
+                console.log(quant[i]);
+            }
+        }
         document.getElementById("main").style.display = 'none';
         document.getElementById("menu").style.display = 'none';
         document.getElementById("form").style.display = 'block';
@@ -395,7 +401,8 @@
     });
 
     order.addEventListener("click", () => {
-            document.getElementById("error").innerText = "";
+
+        document.getElementById("error").innerText = "";
             let name = document.getElementById("user_name").value;
             let email = document.getElementById("user_email").value;
             let phone = document.getElementById("user_phone").value;
