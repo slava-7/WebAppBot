@@ -331,7 +331,7 @@
     function oneclick(btn1, btn2, btn3,num) {
         id = idcoll[num];
         let col = quant[num] + 1;
-        document.querySelector(idcoll[num]).innerHTML = col + " " + id;
+        document.getElementById(idcoll[num]).innerHTML = col + " " + id;
         btn1.style.display = 'none';
         btn2.style.display = 'block';
         btn3.style.display = 'block';
@@ -340,12 +340,12 @@
     function dblclick(val, val1, val2,num) {
         id = idcoll[num];
         let col = quant[num] - 1;
-        document.querySelector(idcoll[num]).innerHTML = col + " " + id;
+        document.getElementById(idcoll[num]).innerHTML = col + " " + id;
         val2.style.display = 'none';
         val1.style.display = 'block';
         val.style.display = 'block';
         if (quant[num] === 0) {
-            document.querySelector(idcoll[num]).innerHTML = id;
+            document.getElementById(idcoll[num]).innerHTML = id;
             val.style.display = 'none';
             val1.style.display = 'none';
             val2.style.display = 'block';
