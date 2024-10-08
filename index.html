@@ -334,8 +334,8 @@
        // let count = document.querySelector(".count");
         let id = idcoll[num].innerText;
         // let label = document.getElementById(id);
-        quant[num] = quant[num] + 1;
-        idcoll[num].innerHTML = quant[num] + " " + id;
+        let col = quant[num] + 1;
+        idcoll[num].innerHTML = col + " " + id;
         btn1.style.display = 'none';
         btn2.style.display = 'block';
         btn3.style.display = 'block';
@@ -344,8 +344,8 @@
     function dblclick(val, val1, val2,num) {
         let id = idcoll[num].innerText;
         // let label = document.getElementById(id);
-        quant[num] = quant[num] - 1;
-        idcoll[num].innerHTML = quant[num] + " " + id;
+        let col = quant[num] - 1;
+        idcoll[num].innerHTML = col + " " + id;
         val2.style.display = 'none';
         val1.style.display = 'block';
         val.style.display = 'block';
