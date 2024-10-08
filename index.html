@@ -326,16 +326,14 @@
     let menu1 = document.getElementById("menu1");
     let idcoll = [Margherita,Formaggi];
     let quant = [0,0,0,0,0,0,0,0,0];
-
+    let id = "";
     // let quantity = 0;
     tg.expand();
 
     function oneclick(btn1, btn2, btn3,num) {
-       // let count = document.querySelector(".count");
-        let id = idcoll[num].innerText;
-        // let label = document.getElementById(id);
-        quant[num] = quant[num] + 1;
-        let col = quant[num];
+       id = "";
+        id = idcoll[num].innerText;
+        let col = quant[num] + 1;
         idcoll[num].innerHTML = col + " " + id;
         btn1.style.display = 'none';
         btn2.style.display = 'block';
@@ -343,10 +341,9 @@
     }
 
     function dblclick(val, val1, val2,num) {
-        let id = idcoll[num].innerText;
-        // let label = document.getElementById(id);
-        quant[num] = quant[num] - 1;
-        let col = quant[num];
+        id = "";
+        id = idcoll[num].innerText;
+        let col = quant[num] - 1;
         idcoll[num].innerHTML = col + " " + id;
         val2.style.display = 'none';
         val1.style.display = 'block';
