@@ -352,6 +352,7 @@
 <form id="form">
     <h1>Ваш заказ</h1>
     <text id="okOrder"></text>
+    <span id="itogo"></span>
     <input type="text" placeholder="Имя" id="user_name">
     <input type="email" placeholder="Email" id="user_email">
     <input type="tel" id="user_phone" placeholder="Телефон в формате ХХХ-ХХХ-ХХХХ" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
@@ -412,13 +413,16 @@
 
     buy.addEventListener("click", () => {
         let text = '';
+        let itog = 0;
         for (i = 0; i < 9; i++) {
             if(quant[i] !== 0) {
                 text = `${text}
                 ${idcoll[i]} ${quant[i]} x ${price[i]} = ` + quant[i]*price[i];
+                itog = itog + quant[i]*price[i]; 
             }
         }
         document.getElementById("okOrder").innerHTML = text;
+        document.getElementById("itogo").innerHTML = `Итого ${itog} Рублей`;
         document.getElementById("main").style.display = 'none';
         document.getElementById("menu").style.display = 'none';
         document.getElementById("form").style.display = 'block';
