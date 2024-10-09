@@ -394,11 +394,11 @@
         let text = '';
         for (i = 0; i < 9; i++) {
             if(quant[i] != 0) {
-                let titleOrder = document.getElementById("okOrder");
-                text = titleOrder.innerText +"\n"+ idcoll[i]+" "+quant[i];
+                document.getElementById("okOrder");
+                text = text\n + idcoll[i]+" "+quant[i];
             }
         }
-        titleOrder.innerHTML = text;
+        document.getElementById("okOrder").innerHTML = text;
         document.getElementById("main").style.display = 'none';
         document.getElementById("menu").style.display = 'none';
         document.getElementById("form").style.display = 'block';
