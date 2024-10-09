@@ -341,7 +341,7 @@
 </div>
 <form id="form">
     <h1>Ваш заказ</h1>
-    <span id="okOrder"></span>
+    <text id="okOrder"></text>
     <input type="text" placeholder="Имя" id="user_name">
     <input type="email" placeholder="Email" id="user_email">
     <input type="tel" id="user_phone" placeholder="Телефон в формате ХХХ-ХХХ-ХХХХ" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
@@ -395,7 +395,7 @@
         for (i = 0; i < 9; i++) {
             if(quant[i] != 0) {
                 document.getElementById("okOrder");
-                text = `${text}\n\
+                text = `${text}
                 ${idcoll[i]} ${quant[i]} шт`;
             }
         }
