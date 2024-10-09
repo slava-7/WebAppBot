@@ -339,6 +339,7 @@
     <button class= "btn btn-outline-danger" id="buy">Оформить заказ</button>
 </div>
 <form id="form">
+    <span id="okOrder"></span>
     <input type="text" placeholder="Имя" id="user_name">
     <input type="email" placeholder="Email" id="user_email">
     <input type="tel" id="user_phone" placeholder="Телефон в формате ХХХ-ХХХ-ХХХХ" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
@@ -391,7 +392,7 @@
         
         for (i = 0; i < 9; i++) {
             if(quant[i] != 0) {
-                document.getElementById("user_name").value = idcoll[i]+" "+quant[i];
+                document.getElementById("okOrder").value = idcoll[i]+" "+quant[i];
             }
         }
         document.getElementById("main").style.display = 'none';
