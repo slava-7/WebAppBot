@@ -396,9 +396,10 @@
         for (i = 0; i < 9; i++) {
             if(quant[i] != 0) {
                 let titleOrder = document.getElementById("okOrder");
-                   titleOrder.innerHTML = titleOrder.innerText + idcoll[i]+" "+quant[i];
+                let Text = titleOrder.innerText +"\n"+ idcoll[i]+" "+quant[i];
             }
         }
+        titleOrder.innerHTML = Text;
         document.getElementById("main").style.display = 'none';
         document.getElementById("menu").style.display = 'none';
         document.getElementById("form").style.display = 'block';
