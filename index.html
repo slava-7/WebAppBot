@@ -108,6 +108,13 @@
         }
 
 
+        #okOrder {
+            width: 50%;
+            height: 300px;
+            margin-left: 5px;
+            text-align: left;
+        }
+        
         input {
             width: 90%;
             outline: none;
@@ -394,7 +401,6 @@
         let text = '';
         for (i = 0; i < 9; i++) {
             if(quant[i] != 0) {
-                document.getElementById("okOrder");
                 text = `${text}
                 ${idcoll[i]} ${quant[i]} шт`;
             }
