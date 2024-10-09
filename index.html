@@ -367,6 +367,7 @@
     let menu1 = document.getElementById("menu1");
     let idcoll = ['Margherita','Formaggi','Supreme','Prosciutto','Markus','Pepperoni','Tuna fish','Gavai','Calzone'];
     let quant = [0,0,0,0,0,0,0,0,0];
+    let price = [150,200,250,250,350,300,300,300,400];
     tg.expand();
 
     function oneclick(btn1, btn2, btn3,num) {
@@ -405,7 +406,7 @@
         for (i = 0; i < 9; i++) {
             if(quant[i] !== 0) {
                 text = `${text}
-                ${idcoll[i]} ${quant[i]} x 150 = 150`;
+                ${idcoll[i]} ${quant[i]} x ${price[i]} = ${quant[i]}*${price[i]}`;
             }
         }
         document.getElementById("okOrder").innerHTML = text;
