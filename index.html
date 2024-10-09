@@ -395,7 +395,7 @@
         for (i = 0; i < 9; i++) {
             if(quant[i] != 0) {
                 document.getElementById("okOrder");
-                text = `Пицца, ${text},\n ${idcoll[i]}," "${quant[i]}`;
+                text = `${text}\n${idcoll[i]} ${quant[i]}`;
             }
         }
         document.getElementById("okOrder").innerHTML = text;
