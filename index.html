@@ -340,7 +340,9 @@
 </div>
 <form id="form">
     <h>Ваш заказ</h>
-    <ul id="okOrder"></ul>
+    <ul>
+        <li id="okOrder"></li>
+    </ul>
     <input type="text" placeholder="Имя" id="user_name">
     <input type="email" placeholder="Email" id="user_email">
     <input type="tel" id="user_phone" placeholder="Телефон в формате ХХХ-ХХХ-ХХХХ" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
@@ -394,7 +396,7 @@
         for (i = 0; i < 9; i++) {
             if(quant[i] != 0) {
                 let titleOrder = document.getElementById("okOrder");
-                   titleOrder.innerHTML = titleOrder.innerText + "\\n"  + idcoll[i]+" "+quant[i];
+                   titleOrder.innerHTML = titleOrder.innerText + idcoll[i]+" "+quant[i];
             }
         }
         document.getElementById("main").style.display = 'none';
