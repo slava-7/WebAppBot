@@ -400,9 +400,9 @@
     buy.addEventListener("click", () => {
         let text = '';
         for (i = 0; i < 9; i++) {
-            if(quant[i] != 0) {
+            if(quant[i] !== 0) {
                 text = `${text}
-                ${idcoll[i]} ${quant[i]} шт`;
+                ${idcoll[i]} ${quant[i]} шт\n\`;
             }
         }
         document.getElementById("okOrder").innerHTML = text;
