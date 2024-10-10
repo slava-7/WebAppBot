@@ -417,7 +417,8 @@
         for (i = 0; i < 9; i++) {
             if(quant[i] !== 0) {
                 text = `${text}
-                ${idcoll[i]} ${quant[i]} x ${price[i]} = ` + quant[i]*price[i];
+                ${idcoll[i]} ${quant[i]} x ${price[i]} = ` + quant[i]*price[i]
+                    ;
                 itog = itog + quant[i]*price[i]; 
             }
         }
