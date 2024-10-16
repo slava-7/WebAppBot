@@ -436,7 +436,7 @@
             let name = document.getElementById("user_name").value;
             let email = document.getElementById("user_email").value;
             let phone = document.getElementById("user_phone").value;
-            let text = document.getElementById("okOrder").value;
+            let text = document.getElementById("okOrder").innerText;
             
             if (name.length < 5) {
                 document.getElementById("error").innerText = "Заполните поле Имя";
