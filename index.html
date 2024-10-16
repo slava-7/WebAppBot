@@ -436,7 +436,8 @@
             let name = document.getElementById("user_name").value;
             let email = document.getElementById("user_email").value;
             let phone = document.getElementById("user_phone").value;
-
+            let text = document.getElementById("okOrder").value;
+            
             if (name.length < 5) {
                 document.getElementById("error").innerText = "Заполните поле Имя";
                 return;
@@ -456,7 +457,8 @@
             let data = {
                 name: name,
                 email: email,
-                phone: phone
+                phone: phone,
+                text: text
             }
             tg.sendData(JSON.stringify(data));
 
